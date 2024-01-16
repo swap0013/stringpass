@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo">Generated Password Is :  swap7443CD20</p>
+
+    <script>
+function generatePassword(name, mobileNo, panCardNo, age) {
+    const firstName = name.substring(0, 4);
+    const lastFourMobile = mobileNo.slice(6,10);
+    const panDigits = panCardNo.substring(2, 4);
+    
+    const password = firstName + lastFourMobile + panDigits + age;
+    
+    return password;
+  }
+  
+  const name = "swapnil Patel";
+  const mobileNo = "8160937443";
+  const panCardNo = "ABCDEFGHIJ";
+  const age = "20";
+  
+  const password = generatePassword(name, mobileNo, panCardNo, age);
+  document.getElementById("demo").innerHTML="Generated Password Is : " + " " + password;
+</script>
+</body>
+</html>
